@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Una comunidad para compartir fotografía y descubrir nuevos talentos.">
+  <title>FotoComunidad | Tu mirada importa</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #101010;
+      color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid #292929;
+    }
+
+    .logo {
+      color: #f3c969;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 420px;
+      padding: 85px 8%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, #101010 8%, #101010dd 48%, #10101033),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85")
+        center / cover;
+    }
+
+    .hero-content {
+      max-width: 620px;
+    }
+
+    .eyebrow {
+      color: #f3c969;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 65px);
+      line-height: 1.08;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      color: #d0d0d0;
+      max-width: 470px;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #f3c969;
+      color: #171717;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 55px 8%;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    .muted {
+      color: #aaa;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .photo {
+      background: #1c1c1c;
+      border: 1px solid #2b2b2b;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .photo-info {
+      padding: 15px;
+    }
+
+    .photo-info p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .monthly {
+      background: #1a1a1a;
+      border-top: 1px solid #303030;
+      border-bottom: 1px solid #303030;
+    }
+
+    .monthly p {
+      color: #ccc;
+      margin: 12px 0 22px;
+      max-width: 620px;
+    }
+
+    footer {
+      padding: 25px 8%;
+      color: #999;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        padding: 65px 7%;
+      }
+
+      section {
+        padding: 40px 7%;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo img {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">FotoComunidad.</div>
+
+    <nav>
+      <a href="#galeria">Galería</a>
+      <a href="#concurso">Concurso</a>
+      <a href="#participar">Participar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Una comunidad, miles de miradas</div>
+        <h1>Tu mirada merece ser vista.</h1>
+        <p>
+          Comparte tus fotografías, descubre el talento de otras personas
+          y participa en nuestro concurso mensual.
+        </p>
+        <a class="button" href="#participar">Quiero participar</a>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Descubre la comunidad</div>
+          <h2>Galería de fotografías</h2>
+        </div>
+        <span class="muted">Una muestra de inspiración</span>
+      </div>
+
+      <div class="gallery">
+        <article class="photo">
+          <img
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80"
+            alt="Lago rodeado de montañas">
+          <div class="photo-info">
+            <h3>Entre montañas</h3>
+            <p>Inspiración · Paisajes</p>
+          </div>
+        </article>
+
+        <article class="photo">
+          <img
+            src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=800&q=80"
+            alt="Zorro en la naturaleza">
+          <div class="photo-info">
+            <h3>Vida salvaje</h3>
+            <p>Inspiración · Animales</p>
+          </div>
+        </article>
+
+        <article class="photo">
+          <img
+            src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&q=80"
+            alt="Cielo nocturno">
+          <div class="photo-info">
+            <h3>Mirando el cielo</h3>
+            <p>Inspiración · Naturaleza</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="monthly" id="concurso">
+      <div class="eyebrow">Cada mes, una nueva oportunidad</div>
+      <h2>Concurso fotográfico mensual</h2>
+      <p>
+        Las fotografías aprobadas competirán por el reconocimiento
+        de la comunidad y la evaluación de nuestro jurado.
+        ¡Pronto anunciaremos a los primeros ganadores!
+      </p>
+    </section>
+
+    <section id="participar">
+      <div class="eyebrow">Tu foto puede ser la siguiente</div>
+      <h2>Forma parte de la comunidad</h2>
+      <p class="muted" style="margin: 12px 0 22px;">
+        Envíanos un mensaje por Instagram para conocer cómo participar.
+        Las fotos se publicarán después de su revisión y aprobación.
+      </p>
+      <a class="button"
+         href="https://www.instagram.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Enviar mi fotografía
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 FotoComunidad · Una comunidad hecha de miradas.
+  </footer>
+</body>
+</html>
